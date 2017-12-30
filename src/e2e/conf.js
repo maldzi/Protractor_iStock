@@ -1,3 +1,6 @@
+const localConfig = require('./config/local.json');
+const mainRegularFlowTestsPath = 'suites/regular-flow/';
+const mainNegativeFlowTestsPath = 'suites/negative-flow/';
 
 exports.config = {
 
@@ -8,7 +11,8 @@ exports.config = {
     },
 
     specs: [
-
+        mainRegularFlowTestsPath + 'login.spec.js',
+        mainNegativeFlowTestsPath + 'loginRefusal.spec.js'
     ],
 
     jasmineNodeOpts: {
